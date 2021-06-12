@@ -1,6 +1,6 @@
 ﻿local data = _G.data
 local mods = _G.mods
------------------------------------------------------------------------------------------------------------------ 		
+------------------------------------------------------------------------------------------------------
 local function has_value (tab, val)
 	for index, value in ipairs(tab) do
 		if value == val then
@@ -13,7 +13,7 @@ end
 -- If we are using Aircrafts and SE give us space shuttles
 --===================================================================================================
 if mods["Aircraft"] then
------------------------------------------------------------------------------------------------------------------ 		
+	-----------------------------------------------------------------------------------------------------
 	if mods["space-exploration"] then
 		local entity = util.table.deepcopy(data.raw["car"]["cargo-plane"])
 		entity["animation"]["filename"] = "__nco-SpaceShuttle__/graphics/se-space-shuttle_spritesheet_shadowless.png"
@@ -34,7 +34,7 @@ if mods["Aircraft"] then
 		data:extend({recipe})
 		table.insert(data.raw["technology"]["cargo-planes"]["effects"], {type = "unlock-recipe",recipe = "se-space-shuttle"})
 	end
------------------------------------------------------------------------------------------------------------------
+	-----------------------------------------------------------------------------------------------------
 	local planes = {"gunship","cargo-plane","jet","flying-fortress","cargo-plane-green","se-space-shuttle"}
 	for _ ,rec in pairs(data.raw["recipe"]) do
 		if has_value(planes, rec.name) then
