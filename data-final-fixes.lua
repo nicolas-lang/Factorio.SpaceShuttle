@@ -17,6 +17,7 @@ if mods["Aircraft"] then
 	if mods["space-exploration"] then
 		local entity = util.table.deepcopy(data.raw["car"]["cargo-plane"])
 		entity["animation"]["filename"] = "__nco-SpaceShuttle__/graphics/se-space-shuttle_spritesheet_shadowless.png"
+		entity.icon = "__nco-SpaceShuttle__/graphics/se-space-shuttle_icon.png"
 		entity.name = "se-space-shuttle"
 		entity.minable = {mining_time = 1, result = "se-space-shuttle"}
 		local item = util.table.deepcopy(data.raw["item-with-entity-data"]["cargo-plane"])
@@ -27,8 +28,10 @@ if mods["Aircraft"] then
 		recipe.name = "se-space-shuttle"
 		recipe.result = "se-space-shuttle"
 		recipe.ingredients = {{"cargo-plane",1},{"se-lifesupport-equipment-1",5},{"se-heat-shielding",1000}}
-		recipe.expensive.result = "se-space-shuttle"
-		recipe.expensive.ingredients = recipe.ingredients
+		recipe.results = nil
+		recipe.expensive = nil
+		recipe.normal = nil
+		recipe.subgroup = "airplanes"
 		data:extend({entity})
 		data:extend({item})
 		data:extend({recipe})
@@ -36,6 +39,11 @@ if mods["Aircraft"] then
 	end
 	-----------------------------------------------------------------------------------------------------
 	local planes = {"gunship","cargo-plane","jet","flying-fortress","cargo-plane-green","se-space-shuttle"}
+	for _ ,itm in pairs(data.raw["item-with-entity-data"]) do
+		if has_value(planes, itm.name) then
+			itm.subgroup = "airplanes"
+		end
+	end
 	for _ ,rec in pairs(data.raw["recipe"]) do
 		if has_value(planes, rec.name) then
 			rec.subgroup = "airplanes"
