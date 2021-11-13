@@ -1,5 +1,4 @@
 ﻿local data = _G.data
-local mods = _G.mods
 ------------------------------------------------------------------------------------------------------
 local function has_value(tab, val)
 	for index, value in ipairs(tab) do
