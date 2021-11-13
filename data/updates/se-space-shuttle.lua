@@ -39,4 +39,7 @@ recipe.subgroup = "airplanes"
 data:extend({entity})
 data:extend({item})
 data:extend({recipe})
-table.insert(data.raw["technology"]["cargo-planes"]["effects"], {type = "unlock-recipe",recipe = "se-space-shuttle"})
+table.insert(
+	data.raw["technology"]["se-space-shuttle"]["effects"],
+	{type = "unlock-recipe", recipe = "se-space-shuttle"}
+)
