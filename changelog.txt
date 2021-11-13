@@ -1,3 +1,9 @@
+Version: 0.0.3
+  Bugfixes:
+    - Fixed Aircraft 1.8.2 compatibility (https://github.com/nicolas-lang/Factorio.SpaceShuttle/issues/4)
+    - Fixed Aircraft realism compatibility (https://github.com/nicolas-lang/Factorio.SpaceShuttle/issues/3)
+    - Fixed a crash related to Aircraft 1.8.2 (https://github.com/nicolas-lang/Factorio.SpaceShuttle/issues/2)
+    - Fixed that the Space Shuttle is not gated behind research (https://github.com/nicolas-lang/Factorio.SpaceShuttle/issues/1)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
   Bugfixes:

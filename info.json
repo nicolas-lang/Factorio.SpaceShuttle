@@ -1,6 +1,6 @@
 {
 	"name": "nco-SpaceShuttle",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"title": "Space Shuttle",
 	"author": "Karoschl",
 	"contact": "",
@@ -9,8 +9,9 @@
 	"factorio_version": "1.1",
 	"dependencies": [
 		"base >= 1.0",
-		"space-exploration-postprocess >= 0.3.0",
-		"Aircraft >= 1.7.1",
-		"(?) Mod-Fixer >= 0.0.1"
+		"space-exploration>= 0.5.0",
+		"Aircraft >= 1.8.2",
+		"(?) Krastorio2",
+		"(?) nco-FunkIt"
 	]
 }
