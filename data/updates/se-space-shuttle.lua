@@ -1,4 +1,5 @@
 ﻿local data = _G.data
+local util = require("util")
 ------------------------------------------------------------------------------------------------------
 local entity = util.table.deepcopy(data.raw["car"]["cargo-plane"])
 entity["animation"]["layers"] = {
