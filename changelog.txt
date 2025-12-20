@@ -3,6 +3,7 @@ Version: 0.0.7
 Date: 20. 12. 2025
   Bugfixes:
     - Compatibility with Factorio 2.0
+    - Improved compatibility with AAI programmable vehicles by removing custom item group
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 20. 08. 2024

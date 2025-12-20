@@ -52,7 +52,7 @@ recipe.ingredients = {
 recipe.result = nil
 recipe.expensive = nil
 recipe.normal = nil
-recipe.subgroup = "airplanes"
+recipe.subgroup = "transport"
 ------------------------------------------------------------------------------------------------------
 data:extend({entity})
 data:extend({item})
