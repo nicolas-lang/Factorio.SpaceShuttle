@@ -8,7 +8,7 @@ local function reload_tech_unlock(technology_name)
 		if force.technologies[technology_name].researched then
 			unlock_state = true
 		end
-		for _, effect in pairs(force.technologies[technology_name].effects) do
+		for _, effect in pairs(force.technologies[technology_name].prototype.effects) do
 			if effect.type == "unlock-recipe" then
 				force.recipes[effect.recipe].enabled = unlock_state
 				log(effect.recipe .. " enabled: " .. tostring(unlock_state))
