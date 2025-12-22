@@ -1,7 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2025-12-21
+  Bugfixes:
+    - Compatibility with Factorio 2.0
+    - Improved compatibility with AAI programmable vehicles by removing custom item group
+  Locale:
+    - Update translations from Crowdin
+    - added locale for Catalan (ca)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 20. 08. 2024
-  Features:
+  Locale:
     - Update translations from Crowdin
     - added locale (fr)
     - added locale (ru)

@@ -31,7 +31,7 @@ entity.icon = "__nco-SpaceShuttle__/graphics/se-space-shuttle_icon.png"
 entity.icon_size = 64
 entity.name = "se-space-shuttle"
 entity.minable = {mining_time = 1, result = "se-space-shuttle"}
-entity.burner.smoke = {}
+entity.energy_source.smoke = {}
 --
 local item = util.table.deepcopy(data.raw["item-with-entity-data"]["cargo-plane"])
 item.name = "se-space-shuttle"
@@ -41,16 +41,18 @@ item.place_result = "se-space-shuttle"
 --
 local recipe = util.table.deepcopy(data.raw["recipe"]["cargo-plane"])
 recipe.name = "se-space-shuttle"
-recipe.result = "se-space-shuttle"
-recipe.ingredients = {
-	{"cargo-plane", 1},
-	{"se-lifesupport-equipment-1", 5},
-	{"se-heat-shielding", 1000}
+recipe.results = {
+  {type = "item", name = "se-space-shuttle", amount = 1}
 }
-recipe.results = nil
+recipe.ingredients = {
+    {type = "item", name = "cargo-plane", amount = 1},
+    {type = "item", name = "se-lifesupport-equipment-1", amount = 5},
+    {type = "item", name = "se-heat-shielding", amount = 1000}
+}
+recipe.result = nil
 recipe.expensive = nil
 recipe.normal = nil
-recipe.subgroup = "airplanes"
+recipe.subgroup = "transport"
 ------------------------------------------------------------------------------------------------------
 data:extend({entity})
 data:extend({item})
